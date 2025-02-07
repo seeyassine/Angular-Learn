@@ -19,7 +19,18 @@
     <h4>User is not logged in</h4>
 } 
 
-
 @if (!Isloggedin) {
     <h4>User is not logged in</h4>
 } 
+
+------------------------------------------
+
+<!-- multiple conditions -->
+
+<h4 *ngIf="isAdmin">Welcome Admin</h4>
+
+<h4 *ngIf="isMember">Welcome Member</h4>
+
+<h4 *ngIf="isGuest">Welcome Guest</h4>
+
+

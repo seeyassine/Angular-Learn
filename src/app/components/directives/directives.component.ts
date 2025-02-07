@@ -12,6 +12,9 @@ export class DirectivesComponent {
 
   Isloggedin: boolean = false;
   username:string = 'logged in';
+  isAdmin:boolean = false;
+  isMember:boolean = false;
+  isGuest:boolean = false;
 
   handleClick() {
     this.Isloggedin = !this.Isloggedin
