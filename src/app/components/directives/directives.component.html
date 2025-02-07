@@ -1,0 +1,25 @@
+<button (click)="handleClick()" >Click</button>
+
+<!-- old way -->
+<h2 *ngIf="Isloggedin; else message"> {{ username }} </h2>
+
+<ng-template #message>
+    <h4>User is not logged in template</h4>
+</ng-template>
+
+<h4 *ngIf="!Isloggedin">User is not logged in</h4>
+
+
+
+<!-- new way -->
+@if (Isloggedin) {
+    <h2>{{ username }}</h2>
+} 
+@else {
+    <h4>User is not logged in</h4>
+} 
+
+
+@if (!Isloggedin) {
+    <h4>User is not logged in</h4>
+} 
