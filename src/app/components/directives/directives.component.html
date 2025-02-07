@@ -33,4 +33,15 @@
 
 <h4 *ngIf="isGuest">Welcome Guest</h4>
 
+<!-- ng if and else approach -->
+
+<h4 *ngIf="isAdmin; else memberMessage">Welcome Admin</h4>
+
+<ng-template #memberMessage>
+    <h4 *ngIf="isMember;else guestMessage">Welcome Member</h4>
+</ng-template>
+
+<ng-template #guestMessage>
+    <h4 *ngIf="isGuest">Welcome Guest</h4>
+</ng-template>
 

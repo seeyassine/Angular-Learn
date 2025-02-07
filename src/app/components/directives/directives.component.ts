@@ -17,7 +17,7 @@ export class DirectivesComponent {
   isGuest:boolean = false;
 
   handleClick() {
-    this.Isloggedin = !this.Isloggedin
+    this.Isloggedin = !this.Isloggedin;
     }
 
 }
