@@ -55,4 +55,10 @@ export class DirectivesComponent {
         this.usersObj.push(user);
       }
 
+      onDelete(user: User){
+       let index = this.usersObj.indexOf(user);
+      //  console.log(index);
+       this.usersObj.splice(index, 1);  // remove 1 element from the index
+      }
+
 }

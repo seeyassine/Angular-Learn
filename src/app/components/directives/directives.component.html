@@ -181,12 +181,13 @@
 
 ------------------------------------------ <hr>
 
-<!-- ngFor with Objects user -->
+<!-- ngFor with Objects user  Fetch Array Object -->
 
 <ul>
     <p>old Syntax</p>
     <li *ngFor="let user of usersObj">
         {{ user.id }} - {{user.name}} -{{ user.age }} - {{ user.email }}
+        <button (click)="onDelete(user)">Delete</button>
     </li>
 </ul>
 
