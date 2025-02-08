@@ -157,3 +157,24 @@
 @for (item of items; track $index) {
     <h3>{{ item }} - {{ $index }}</h3>
 }
+
+<hr>
+
+<p>old syntax</p>
+<p>Fetch in order List</p>
+
+<ul>
+    <li  *ngFor="let user of users">{{ user }}</li>
+</ul>
+
+<hr>
+
+<p>new syntax</p>
+<p>Fetch in order List</p>
+
+    <ul>
+        @for(user of users; track user) {
+            <li>{{ user }}</li>
+        }
+    </ul>
+
