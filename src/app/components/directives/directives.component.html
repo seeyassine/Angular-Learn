@@ -55,10 +55,19 @@
     <h4>Welcome Guest</h4>
 }
 
-------------------------------------------
+------------------------------------------ <hr>
 
 <!-- if directive with number Values -->
 
    <button (click)="countLoginAttempts()" *ngIf="loginCount < 3 ">Log In</button>
 
    <h4 *ngIf="loginCount >= 3">Exceeded 3 login Attempts, Try Again Later</h4>
+
+------------------------------------------ <hr>
+
+@if (loginCount < 3) {
+    <button (click)="countLoginAttempts()">Log In Syntax</button>
+}
+@if (loginCount >= 3) {
+    <h4>Exceeded 3 login Attempts, Try Again Later</h4>
+}
