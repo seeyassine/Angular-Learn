@@ -12,9 +12,15 @@ export class DirectivesComponent {
 
   Isloggedin: boolean = false;
   username:string = 'logged in';
+  isAdmin:boolean = false;
+  isMember:boolean = false;
+  isGuest:boolean = true;
 
   handleClick() {
-    this.Isloggedin = !this.Isloggedin
+    this.Isloggedin = !this.Isloggedin;
+    this.isAdmin = !this.isAdmin;
+    this.isMember = !this.isMember;
+    this.isGuest = !this.isGuest;
     }
 
 }
