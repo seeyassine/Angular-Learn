@@ -97,3 +97,22 @@
 <ng-template #dynamicTemplate>
     <p>This content is inside ng-template </p>
 </ng-template>
+
+------------------------------------------ <hr>
+
+<!-- ngTemplateOutlet -->
+
+    <ng-template #callToAction>
+        <p>Call call To Action</p>
+        <button>Join Now</button>
+    </ng-template>
+
+        <div [ngTemplateOutlet]="callToAction">
+            <h5>Sidebar</h5>
+        </div>
+        <div [ngTemplateOutlet]="callToAction">
+            <h5>Hero</h5>
+        </div>
+        <div [ngTemplateOutlet]="callToAction">
+            <h5>Footer</h5>
+        </div>

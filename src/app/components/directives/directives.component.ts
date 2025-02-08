@@ -1,10 +1,10 @@
-import { NgIf } from '@angular/common';
+import { NgIf, NgTemplateOutlet } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-directives',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, NgTemplateOutlet],
   templateUrl: './directives.component.html',
   styleUrl: './directives.component.css'
 })
