@@ -50,4 +50,9 @@ export class DirectivesComponent {
       console.log(this.loginCount);
       }
 
+      addNewUser(){
+        let user = {id:6, name: 'User 1', email:'user1@gmail.com' , age: 50}
+        this.usersObj.push(user);
+      }
+
 }
