@@ -71,3 +71,13 @@
 @if (loginCount >= 3) {
     <h4>Exceeded 3 login Attempts, Try Again Later</h4>
 }
+
+------------------------------------------ <hr>
+
+<!-- if directives with string values -->
+
+<h4 *ngIf="userRole == 'Admin'; else RoleMessage ">Welcome Admin</h4>
+
+<ng-template #RoleMessage>
+    <h4 *ngIf="userRole == 'Member' ">Welcome Member</h4>
+</ng-template>
