@@ -17,6 +17,7 @@ export class DirectivesComponent {
   isGuest:boolean = true;
 
   loginCount:number = 0;
+  userRole:string = 'Member';
 
   handleClick() {
     this.Isloggedin = !this.Isloggedin;
