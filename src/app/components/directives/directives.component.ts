@@ -16,11 +16,18 @@ export class DirectivesComponent {
   isMember:boolean = false;
   isGuest:boolean = true;
 
+  loginCount:number = 0;
+
   handleClick() {
     this.Isloggedin = !this.Isloggedin;
     this.isAdmin = !this.isAdmin;
     this.isMember = !this.isMember;
     this.isGuest = !this.isGuest;
     }
+
+    countLoginAttempts() {
+      this.loginCount++;
+      console.log(this.loginCount);
+      }
 
 }
