@@ -91,3 +91,9 @@
 }
 
 ------------------------------------------ <hr>
+<!-- ng-template -->
+<h4 *ngIf="userRole == 'Admin'; else dynamicTemplate ">Welcome Admin</h4>
+
+<ng-template #dynamicTemplate>
+    <p>This content is inside ng-template </p>
+</ng-template>
