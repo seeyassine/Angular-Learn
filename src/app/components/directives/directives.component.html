@@ -81,3 +81,13 @@
 <ng-template #RoleMessage>
     <h4 *ngIf="userRole == 'Member' ">Welcome Member</h4>
 </ng-template>
+
+<!-- --------new syntax--------- -->
+
+@if (userRole == 'Admin') {
+    <h4>Welcome Member</h4>
+} @else if (userRole == 'Member') {
+    <h4>Welcome Member</h4>
+}
+
+------------------------------------------ <hr>
