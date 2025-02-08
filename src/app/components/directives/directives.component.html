@@ -116,3 +116,29 @@
         <div [ngTemplateOutlet]="callToAction">
             <h5>Footer</h5>
         </div>
+
+------------------------------------------ <hr>
+
+<!-- ng for Directive  -->
+
+<ul>
+    <li *ngFor="let item of items; let i = index">{{ item }} - {{ i }}</li>
+</ul>
+
+<hr>
+
+<h3>{{ users }}</h3>
+
+<hr>
+
+<h3>{{ users[0] }}</h3>
+<h3>{{ users[1] }}</h3>
+<h3>{{ users[2] }}</h3>
+<h3>{{ users[3] }}</h3>
+
+<hr>
+
+<h3 *ngFor="let user of users">
+    {{ user }}
+</h3>
+

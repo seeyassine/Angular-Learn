@@ -1,10 +1,10 @@
-import { NgIf, NgTemplateOutlet } from '@angular/common';
+import { NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-directives',
   standalone: true,
-  imports: [NgIf, NgTemplateOutlet],
+  imports: [NgIf, NgTemplateOutlet, NgFor],
   templateUrl: './directives.component.html',
   styleUrl: './directives.component.css'
 })
@@ -18,6 +18,10 @@ export class DirectivesComponent {
 
   loginCount:number = 0;
   userRole:string = 'Member';
+
+  items: any = ['item1', 'item2', 'item3', 'item4', 'item5'];
+
+  users: Array<string> = ['Yassine', 'Anas', 'Mohamed', 'Hassan', 'Omar'];
 
   handleClick() {
     this.Isloggedin = !this.Isloggedin;
