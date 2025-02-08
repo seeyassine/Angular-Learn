@@ -178,3 +178,24 @@
         }
     </ul>
 
+
+------------------------------------------ <hr>
+
+<!-- ngFor with Objects user -->
+
+<ul>
+    <p>old Syntax</p>
+    <li *ngFor="let user of usersObj">
+        {{ user.id }} - {{user.name}} -{{ user.age }} - {{ user.email }}
+    </li>
+</ul>
+
+<!-- new Syntax --> <hr>
+
+<ul>
+    <p>new Syntax </p>
+    @for(user of usersObj; track user) {
+        <li>{{ user.id }} - {{user.name}} -{{ user.age }} - {{ user.email }}</li>
+    }
+</ul>
+
