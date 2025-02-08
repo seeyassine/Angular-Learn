@@ -142,3 +142,18 @@
     {{ user }}
 </h3>
 
+<hr>
+
+ <p>new for syntax approach </p>
+
+@for (user of users; track user) {
+    <h3>{{ user }}</h3>
+}
+
+<hr>
+
+<p>new for syntax approach with index</p>
+
+@for (item of items; track $index) {
+    <h3>{{ item }} - {{ $index }}</h3>
+}
