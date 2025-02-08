@@ -45,3 +45,12 @@
     <h4 *ngIf="isGuest">Welcome Guest</h4>
 </ng-template>
 
+<!-- @if an @else syntax approach  -->
+
+@if (isAdmin) {
+    <h4>Welcome Admin</h4>
+}@else if (isMember) {
+    <h4>Welcome Member</h4>
+}@else if (isGuest) {
+    <h4>Welcome Guest</h4>
+}
