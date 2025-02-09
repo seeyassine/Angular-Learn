@@ -15,6 +15,7 @@ export class AppComponent {
  isLoggedIn: boolean = false;
 
   appPostTitle: string = 'Post 1';
-
   appIsLogin: boolean = false;
+
+  appList: string[] = ['Post 1', 'Post 2', 'Post 3'];
 }
