@@ -196,10 +196,11 @@
 <hr>
 
 <!-- delete use index -->
+usersCount 
 <ul>
     <p>old Syntax</p>
-    <li *ngFor="let user of usersObj; let i = index">
-        {{ usersObj.length }} - {{ i }} - {{ user.id }} - {{user.name}} -{{ user.age }}
+    <li *ngFor="let user of usersObj; let i = index; let usersCount = count">
+        {{ usersCount }} - {{ i }} - {{ user.id }} - {{user.name}} -{{ user.age }}
         <button (click)="onDeleteUser(i)">Delete</button>
     </li>
 </ul>
@@ -218,8 +219,8 @@
 <!-- delete use index -->
 <ul>
     <p>new Syntax </p>
-    @for(user of usersObj; track user; let i = $index) {
-        <li>{{ i }} - {{user.name}} -{{ user.age }}
+    @for(user of usersObj; track user; let i = $index; let usersCount = $count) {
+        <li> {{usersCount}} - {{ i }} - {{user.name}} -{{ user.age }}
             <button (click)="onDeleteUser(i)">Delete</button>
         </li>
     }
