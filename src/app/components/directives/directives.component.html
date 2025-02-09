@@ -199,7 +199,7 @@
 <ul>
     <p>old Syntax</p>
     <li *ngFor="let user of usersObj; let i = index">
-      {{ i }} - {{ user.id }} - {{user.name}} -{{ user.age }}
+        {{ usersObj.length }} - {{ i }} - {{ user.id }} - {{user.name}} -{{ user.age }}
         <button (click)="onDeleteUser(i)">Delete</button>
     </li>
 </ul>
@@ -229,5 +229,13 @@
 
 <!-- change detection -->
  <button (click)="addNewUser()">Add New User</button>
+
+ <!-- {{ usersObj | json }} -->
+
+<hr>
+
+the length of the array userObj is :  
+
+{{ usersObj.length }}
 
 

@@ -1,4 +1,4 @@
-import { NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
+import { CommonModule, NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
 import { Component } from '@angular/core';
 
 interface User {
@@ -11,7 +11,7 @@ interface User {
 @Component({
   selector: 'app-directives',
   standalone: true,
-  imports: [NgIf, NgTemplateOutlet, NgFor],
+  imports: [NgIf, NgTemplateOutlet, NgFor ,CommonModule],
   templateUrl: './directives.component.html',
   styleUrl: './directives.component.css'
 })
@@ -37,6 +37,10 @@ export class DirectivesComponent {
     {id:4, name: 'Hassan', email:'hassan@gmail.com' , age: 40},
     {id:5, name: 'Omar', email:'omar@gmail.com' , age: 45}
   ]
+
+  constructor() { 
+  console.log(this.usersObj.length); 
+  }
 
   handleClick() {
     this.Isloggedin = !this.Isloggedin;
