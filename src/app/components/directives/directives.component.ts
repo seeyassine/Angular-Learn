@@ -30,13 +30,7 @@ export class DirectivesComponent {
 
   users: Array<string> = ['Yassine', 'Anas', 'Mohamed', 'Hassan', 'Omar'];
 
-  usersObj: Array<User> = [
-    {id: 1, name: 'Yassine', email:'yassine@gmail.com' ,age: 25},
-    {id:2, name: 'Anas', email:'anas@gmail.com' , age: 30},
-    {id:3, name: 'Mohamed', email:'mohamed@gmail.com' , age: 35},
-    {id:4, name: 'Hassan', email:'hassan@gmail.com' , age: 40},
-    {id:5, name: 'Omar', email:'omar@gmail.com' , age: 45}
-  ]
+  usersObj: Array<User> = []
 
   constructor() { 
   console.log(this.usersObj.length); 
