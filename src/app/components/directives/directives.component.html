@@ -275,3 +275,29 @@ the length of the array userObj is :
         <p>Please login</p>
     }
 }
+
+
+<hr>
+<!-- ngStyle directive -->
+
+<h1 [style.color]="Isloggedin? 'green' : 'red'" 
+    [style.textTransform]="Isloggedin? 'uppercase' : 'lowercase'">welcome Admin</h1>
+
+<hr>
+
+<h1 [ngStyle]="{
+    color: Isloggedin? 'green' : 'red',
+    textTransform: Isloggedin? 'uppercase' : 'lowercase'
+}">Ng Style directive</h1>
+
+<!-- ngClass directive -->
+<h1 [class.login]="Isloggedin" [class.logout]="!Isloggedin">
+    Class Binding
+</h1>
+
+
+
+<h1 [ngClass]="{
+    'login': Isloggedin,
+    'logout': !Isloggedin, 
+}">Ng Class directive</h1>
