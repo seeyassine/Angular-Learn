@@ -1,3 +1,7 @@
-<app-posts-list></app-posts-list>
+
+<app-posts-list (MessageEvent)="reciveMessage($event)"></app-posts-list>
+
 
 <p>{{ message }}</p>
+
+<p>{{ messageFromChild }}</p>
