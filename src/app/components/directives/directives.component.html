@@ -262,3 +262,16 @@ the length of the array userObj is :
 </div>
 
 
+<hr>
+
+@switch (usersRole) {
+    @case('Admin') {
+        <p>Welcome Admin</p>
+    }
+    @case('Member') {
+        <p>Welcome Member</p>
+    }
+    @default {
+        <p>Please login</p>
+    }
+}
