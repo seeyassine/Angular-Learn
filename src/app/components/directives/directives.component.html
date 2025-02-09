@@ -97,3 +97,109 @@
 <ng-template #dynamicTemplate>
     <p>This content is inside ng-template </p>
 </ng-template>
+
+------------------------------------------ <hr>
+
+<!-- ngTemplateOutlet -->
+
+    <ng-template #callToAction>
+        <p>Call call To Action</p>
+        <button>Join Now</button>
+    </ng-template>
+
+        <div [ngTemplateOutlet]="callToAction">
+            <h5>Sidebar</h5>
+        </div>
+        <div [ngTemplateOutlet]="callToAction">
+            <h5>Hero</h5>
+        </div>
+        <div [ngTemplateOutlet]="callToAction">
+            <h5>Footer</h5>
+        </div>
+
+------------------------------------------ <hr>
+
+<!-- ng for Directive  -->
+
+<ul>
+    <li *ngFor="let item of items; let i = index">{{ item }} - {{ i }}</li>
+</ul>
+
+<hr>
+
+<h3>{{ users }}</h3>
+
+<hr>
+
+<h3>{{ users[0] }}</h3>
+<h3>{{ users[1] }}</h3>
+<h3>{{ users[2] }}</h3>
+<h3>{{ users[3] }}</h3>
+
+<hr>
+
+<h3 *ngFor="let user of users">
+    {{ user }}
+</h3>
+
+<hr>
+
+ <p>new for syntax approach </p>
+
+@for (user of users; track user) {
+    <h3>{{ user }}</h3>
+}
+
+<hr>
+
+<p>new for syntax approach with index</p>
+
+@for (item of items; track $index) {
+    <h3>{{ item }} - {{ $index }}</h3>
+}
+
+<hr>
+
+<p>old syntax</p>
+<p>Fetch in order List</p>
+
+<ul>
+    <li  *ngFor="let user of users">{{ user }}</li>
+</ul>
+
+<hr>
+
+<p>new syntax</p>
+<p>Fetch in order List</p>
+
+    <ul>
+        @for(user of users; track user) {
+            <li>{{ user }}</li>
+        }
+    </ul>
+
+
+------------------------------------------ <hr>
+
+<!-- ngFor with Objects user -->
+
+<ul>
+    <p>old Syntax</p>
+    <li *ngFor="let user of usersObj">
+        {{ user.id }} - {{user.name}} -{{ user.age }} - {{ user.email }}
+    </li>
+</ul>
+
+<!-- new Syntax --> <hr>
+
+<ul>
+    <p>new Syntax </p>
+    @for(user of usersObj; track user) {
+        <li>{{ user.id }} - {{user.name}} -{{ user.age }} - {{ user.email }}</li>
+    }
+</ul>
+
+<!-- change detection -->
+ <button (click)="addNewUser()">Add New User</button>
+
+
