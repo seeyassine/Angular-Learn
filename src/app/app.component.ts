@@ -7,12 +7,12 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent,NavbarComponent,PostsListComponent],
+  imports: [RouterOutlet, PostsListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
  isLoggedIn: boolean = false;
 
- postTitle: string = 'Post 1';
+  appPostTitle: string = 'Post 1';
 }
