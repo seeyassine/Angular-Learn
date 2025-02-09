@@ -9,9 +9,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './posts-list.component.css'
 })
 export class PostsListComponent {
-
- @Input() postListTitle: string = '';
- @Input() postIsLogin: boolean = false;
-
- @Input() postList: string[] = [];
+  childMessage: string = 'Hello from child Component';
+  postCount: number = 0;
 }
