@@ -26,6 +26,8 @@ export class DirectivesComponent {
   loginCount:number = 0;
   userRole:string = 'Member';
 
+  usersRole: string = 'Admin';
+
   items: any = ['item1', 'item2', 'item3', 'item4', 'item5'];
 
   users: Array<string> = ['Yassine', 'Anas', 'Mohamed', 'Hassan', 'Omar'];

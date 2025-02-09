@@ -253,3 +253,11 @@ the length of the array userObj is :
 {{ usersObj.length }}
 
 
+<hr>
+
+<div [ngSwitch]="usersRole">
+    <p *ngSwitchCase="'Admin'">welcome Admin</p>
+    <p *ngSwitchCase="'Member'">welcome Member</p>
+</div>
+
+
