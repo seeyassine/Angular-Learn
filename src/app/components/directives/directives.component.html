@@ -226,8 +226,11 @@ usersCount
  }
 <ul>
     <p>new Syntax </p>
-    @for(user of usersObj; track user; let i = $index; let usersCount = $count) {
-        <li> {{usersCount}} - {{ i }} - {{user.name}} -{{ user.age }}
+    @for(user of usersObj; track user; let i = $index; let usersCount = $count; let first = $first; let last = $last; let even = $even; let odd = $odd) {
+       <li> {{ odd }}   <!-- impaire -->
+            - {{ even }} <!--  paire -->
+            -  {{ last }} - {{ first }} -
+             {{usersCount}} - {{ i }} - {{user.name}} -{{ user.age }}
                 <button (click)="onDeleteUser(i)">Delete</button>
         </li>
     }
