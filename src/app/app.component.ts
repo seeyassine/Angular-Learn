@@ -15,4 +15,6 @@ export class AppComponent {
  isLoggedIn: boolean = false;
 
   appPostTitle: string = 'Post 1';
+
+  appIsLogin: boolean = false;
 }
