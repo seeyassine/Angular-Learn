@@ -221,12 +221,21 @@ usersCount
 
 <hr>
 <!-- delete use index -->
+ @if (usersObj.length == 0) {
+    <p>No Users to Display - Loaded Using new Syntax </p>
+ }
 <ul>
     <p>new Syntax </p>
-    @for(user of usersObj; track user; let i = $index; let usersCount = $count) {
-        <li> {{usersCount}} - {{ i }} - {{user.name}} -{{ user.age }}
+    @for(user of usersObj; track user; let i = $index; let usersCount = $count; let first = $first; let last = $last; let even = $even; let odd = $odd) {
+       <li> {{ odd }}   <!-- impaire -->
+            - {{ even }} <!--  paire -->
+            -  {{ last }} - {{ first }} -
+             {{usersCount}} - {{ i }} - {{user.name}} -{{ user.age }}
                 <button (click)="onDeleteUser(i)">Delete</button>
         </li>
+    }
+    @empty {
+        <p>No Users to Display - Loaded Using new Syntax use empty</p>
     }
 </ul>
 
@@ -242,5 +251,14 @@ usersCount
 the length of the array userObj is :  
 
 {{ usersObj.length }}
+
+
+<hr>
+
+<div [ngSwitch]="usersRole">
+    <p *ngSwitchCase="'Admin'">welcome Admin</p>
+    <p *ngSwitchCase="'Member'">welcome Member</p>
+    <p *ngSwitchDefault>Please login</p>
+</div>
 
 
