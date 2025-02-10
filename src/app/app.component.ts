@@ -5,11 +5,12 @@ import { HeaderComponent } from './header/header.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
 import { CardComponent } from './card/card.component';
 import { NgComponentOutlet } from '@angular/common';
+import { ProfileComponent } from './profile/profile.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PostsListComponent, NgComponentOutlet],
+  imports: [RouterOutlet, PostsListComponent, NgComponentOutlet,ProfileComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
