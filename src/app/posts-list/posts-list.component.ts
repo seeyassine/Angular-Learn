@@ -1,10 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { CardComponent } from "../card/card.component";
 
 @Component({
   selector: 'app-posts-list',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, CardComponent],
   templateUrl: './posts-list.component.html',
   styleUrl: './posts-list.component.css'
 })
