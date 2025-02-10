@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
+import { CardComponent } from './card/card.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PostsListComponent],
+  imports: [RouterOutlet, PostsListComponent, CardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
