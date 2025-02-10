@@ -4,35 +4,23 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
 import { CardComponent } from './card/card.component';
+import { NgComponentOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PostsListComponent, CardComponent],
+  imports: [RouterOutlet, PostsListComponent, NgComponentOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent  {
  
-  @ViewChild(PostsListComponent) childMessage: any; // This is the child component object stored all data in the parent component
+  constructor() { }
 
-  message: string = '';
-
-  messageFromChild: string = '';
-
-  constructor() {
-    console.log(this.childMessage);
+  loadComponent(){
+    return PostsListComponent;
   }
 
-  ngAfterViewInit() {
-    console.log(this.childMessage);
-    this.message = this.childMessage.childMessage;
-  }
-
-
-   reciveMessage(message: string){ 
-      console.log(message);
-      this.messageFromChild = message;
-   }
+  
 
 }
