@@ -15,6 +15,8 @@ import { ProfileComponent } from './profile/profile.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent  {
+
+  username:string = 'YASSINE';
  
   constructor( private viewContainer: ViewContainerRef) { }
 
@@ -25,6 +27,10 @@ export class AppComponent  {
   removeComponent(){
     this.viewContainer.remove();
     //this.viewContainer.clear(); // Removes all components in the container
+  }
+
+  changeUser(){
+    this.username = 'yassine ASMK';
   }
 
   

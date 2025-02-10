@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -8,6 +8,7 @@ import { Component, OnChanges, SimpleChanges } from '@angular/core';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent implements OnChanges{
+  @Input() Pusername : string = '';
 
   ngOnChanges() {
     console.log('OnChanges triggred');
