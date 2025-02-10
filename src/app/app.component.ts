@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ViewContainerRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,10 +15,15 @@ import { NgComponentOutlet } from '@angular/common';
 })
 export class AppComponent  {
  
-  constructor() { }
+  constructor( private viewContainer: ViewContainerRef) { }
 
   loadComponent(){
-    return PostsListComponent;
+    this.viewContainer.createComponent(PostsListComponent);
+  }
+
+  removeComponent(){
+    this.viewContainer.remove();
+    //this.viewContainer.clear(); // Removes all components in the container
   }
 
   
