@@ -1,0 +1,20 @@
+<form [formGroup]="employeeForm" (ngSubmit)="submitForm()" >
+            <h2>employeeForm</h2>
+            <div>
+                <div class="employeeForm">
+                    <div *ngFor="let emp of employees.controls; let i = index ">
+                        <div [formGroupName]="i">
+                            <label >Name:</label>
+                            <input type="text" formControlName="name" 
+                            placeholder="enter empolyee name...">
+
+                            <label >Job:</label>
+                            <input type="text" formControlName="job" 
+                            placeholder="enter empolyee job...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="add-button" (click)="addEmployee()">Add</button>
+            <button type="submit" class="submit-button">Submit</button>
+</form>
