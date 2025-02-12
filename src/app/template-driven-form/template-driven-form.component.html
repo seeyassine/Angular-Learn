@@ -1,0 +1,32 @@
+<form class="form-container" #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+       
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" [(ngModel)]="user" require>
+        </div>
+
+        <div>
+            <label for="email">email</label>
+            <input type="email" name="email" [(ngModel)]="email" require>
+        </div>
+
+        <div>
+            <label for="country">Country</label>
+            <select name="country" [(ngModel)]="selectedCountry">
+                @for (country of countries; track $index) {
+                    <option [value]="country.value"> {{ country.name }}</option>
+                }
+            </select>
+        </div>
+
+        <div>
+            <label for="city">City:</label>
+            <select name="city" [(ngModel)]="city">
+                @for (city of getCitiesByCountry(selectedCountry); track $index) {
+                <option [value]="city">{{ city }}</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit">Submit</button>
+</form>
