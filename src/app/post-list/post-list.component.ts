@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 import { UserComponent } from '../user/user.component';
 import { UserService } from '../service/user.service';
 import { PostService } from '../service/post.service';
+import { Post } from '../interfaces/post';
 
 @Component({
   selector: 'app-post-list',
@@ -24,7 +25,7 @@ export class PostListComponent {
   }
 
   addPost(){
-    let postData = {
+    let postData:Post = {
       id:7,
       title: 'Post title 3',
       post: 'Dummy Post 3'
