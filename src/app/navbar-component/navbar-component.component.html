@@ -1,0 +1,6 @@
+Nav bar
+<nav>
+    <span *ngIf="username; else guest">Welcome, {{ username }}</span>
+    <ng-template #guest><span>Guest</span></ng-template>
+    <button (click)="logout()">Logout</button>
+  </nav>
