@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { UserComponent } from '../user/user.component';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-post-list',
@@ -11,4 +12,8 @@ import { UserComponent } from '../user/user.component';
 })
 export class PostListComponent {
   @Input()  usersChil: Array<any> = [];
+  userService:any;
+  constructor(){
+   this.userService = new UserService();
+  }
 }
