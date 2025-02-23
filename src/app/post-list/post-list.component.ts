@@ -13,7 +13,8 @@ import { UserService } from '../service/user.service';
 export class PostListComponent {
   @Input()  usersChil: Array<any> = [];
   userService:any;
-  constructor(){
-   this.userService = new UserService();
+  constructor(private userServiceDI: UserService){
+    this.userService = userServiceDI;
+  //  this.userService = new UserService();
   }
 }
