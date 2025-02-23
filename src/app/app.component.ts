@@ -15,9 +15,9 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
    userService : any;
-   constructor(userService: UserService){
-    this.userService = userService
-    console.log(userService);
+   constructor(private userServiceDI: UserService){
+    this.userService = userServiceDI
+    console.log(userServiceDI);
    }
    
 }
