@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -6,12 +7,18 @@ import { Injectable } from '@angular/core';
 export class PostService {
 
   posts: Array<any> = [
-    {id:1, title: '30' , post:'seeyassine@gmail.com'},
-    {id:2, title: '350' , post:'yassine@gmail.com'},
+    {id:1, title: 'title1' , post:'seeyassine@gmail.com'},
+    {id:2, title: 'title2' , post:'yassine@gmail.com'},
   ]
   constructor() { }
 
   getPost(){
     return this.posts;
   }
+
+  addPostService(newPost:any){
+    console.log(newPost);
+    this.posts.push(newPost)
+  }
+  
 }

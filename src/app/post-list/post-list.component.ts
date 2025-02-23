@@ -21,6 +21,14 @@ export class PostListComponent {
 
   // this.posts = postService.posts;
   this.posts = postService.getPost();
+  }
 
+  addPost(){
+    let postData = {
+      id:7,
+      title: 'Post title 3',
+      post: 'Dummy Post 3'
+    }
+    this.postService.addPostService(postData);
   }
 }

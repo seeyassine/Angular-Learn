@@ -12,8 +12,9 @@ hhhhhhhhhhhhhh
     <h1>{{posts| json}}</h1>
     <ul>
         @for(post of posts; track $index){ 
-        <li>{{post.id}}</li>
         <li>{{post.title}}</li>
         }
     </ul>
+
+    <button (click)="addPost()">Add Post</button>
 hhhhhhhhhhhhh
