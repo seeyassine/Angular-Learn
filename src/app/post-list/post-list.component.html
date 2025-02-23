@@ -8,3 +8,12 @@
     <app-user></app-user>
 
     <h1>{{userService.users | json}}</h1>
+hhhhhhhhhhhhhh
+    <h1>{{posts| json}}</h1>
+    <ul>
+        @for(post of posts; track $index){ 
+        <li>{{post.id}}</li>
+        <li>{{post.title}}</li>
+        }
+    </ul>
+hhhhhhhhhhhhh
