@@ -1,0 +1,8 @@
+<p>post-list works!</p>
+@for( user of usersChil; track $index){
+    {{ user.name }} --- {{ user.age }} --- {{ user.email }}
+}
+<br>
+    {{ usersChil | json }}
+
+    <app-user></app-user>
