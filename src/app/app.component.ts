@@ -11,14 +11,25 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'Angular-learn';
 
-  price = 19;
+ products = signal([
+    { id: 1, name: 'Jacket', price: 100 },
+    { id: 2, name: 'hat', price: 200 },
+    { id: 3, name: 'phone', price: 300 }
+  ]);
 
-  quantity = signal(10);
+  filterName = signal('');
 
-  totalPrice = computed(() => this.price * this.quantity());
+  filteredProducts = computed(() => {
+    return this.products().filter(
+      product => product.name
+      .toLocaleLowerCase().
+      includes(this.filterName().toLocaleLowerCase()));
+  });
 
-  changeQuantity(event: Event) {
-    this.quantity.set((event.target as HTMLInputElement).valueAsNumber);
+  changeFilterName(event: Event) {
+    let newFilterName = (event.target as HTMLInputElement).value;
+    this.filterName.set(newFilterName);
   }
+
 
 }

@@ -1,6 +1,16 @@
-<label>{{ totalPrice() }}</label>
+<div>
+    <input type="text" (input)="changeFilterName($event)" placeholder="Filter by name" />
+</div>
 
 <br>
 
-<input type="number" value="{{ quantity() }}" (change)="changeQuantity($event)" />
-
+<table>
+    @for (product of filteredProducts(); track $index) {
+        <tr>
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+        </tr>
+    }
+   
+</table>
