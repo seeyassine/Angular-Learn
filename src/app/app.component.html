@@ -1,8 +1,6 @@
-app.component.html
+<label>{{ totalPrice() }}</label>
 
 <br>
-<br>
-<button (click)="toggleDarkMode()">Toggle</button>
-<br>
-<label>{{ Label }}</label>
+
+<input type="number" value="{{ quantity() }}" (change)="changeQuantity($event)" />
 
