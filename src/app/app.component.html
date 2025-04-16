@@ -1,16 +1,5 @@
-<div>
-    <input type="text" (input)="changeFilterName($event)" placeholder="Filter by name" />
-</div>
+<h1>
+    Product List
+</h1>
 
-<br>
-
-<table>
-    @for (product of filteredProducts(); track $index) {
-        <tr>
-            <td>{{ product.id }}</td>
-            <td>{{ product.name }}</td>
-            <td>{{ product.price }}</td>
-        </tr>
-    }
-   
-</table>
+<product-list [products]="allproducts"></product-list>
